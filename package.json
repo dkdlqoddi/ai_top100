@@ -1,0 +1,25 @@
+{
+  "name": "nextjs_template",
+  "verseion": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "next telemetry disable || true"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.14",
+    "autoprefixer": "^10.4.21",
+    "next": "^15.5.6",
+    "postcss": "^8.5.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.14",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.8.1",
+    "@types/react": "19.2.2"
+  }
+}

@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* 색/배경 토큰 (선택) */
+:root {
+  --bg: #0f141b;
+  --fg: #ffffff;
+  --muted: #9fb2c5;
+  --brand: #4cc2ff;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --fg: #111827;
+    --muted: #6b7280;
+  }
+}
+
+html, body, #__next { height: 100%; }
+body {
+  color: var(--fg);
+  background:
+    radial-gradient(1200px 800px at 80% -20%, rgba(76,194,255,0.15), transparent 60%)
+    var(--bg);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* 유틸리티 컴포지션 (variant 사용 금지) */
+.section { @apply py-24; } /* 기본 패딩만 @apply */
+@media (min-width: 768px) { /* md:py-32 대체 */
+  .section { @apply py-32; }
+}
+.container { @apply mx-auto max-w-6xl px-6; }
+
+.btn { @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 font-medium shadow transition-transform hover:-translate-y-0.5; }
+.btn-primary { background: var(--brand); color: #000; }
+.btn-ghost { @apply border border-white/15 text-white; background: color-mix(in oklab, white 5%, transparent); }
+.card { @apply rounded-2xl border border-white/10 p-6; background: color-mix(in oklab, white 5%, transparent); backdrop-filter: blur(6px); }
+.shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
